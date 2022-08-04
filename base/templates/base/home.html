@@ -179,19 +179,131 @@
 
     .testimonial .testimonial-item {
         background: #416327 !important;
-        
+
     }
 
     .testimonial .testimonial-item i {
-       
+
         color: #fef22e !important;
-       
+
     }
-    .client-text{
+
+    .client-text {
         color: rgb(255, 255, 255) !important;
     }
+
     .client-head {
         color: #fef22e !important;
+    }
+
+    .progress-wrap-layout1 {
+        background-color: #f4efeb;
+        background-image: url('img/figure/banne-img1.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    @media only screen and (max-width: 1199px) {
+        .progress-wrap-layout1 {
+            background-size: cover;
+        }
+    }
+
+    .progress-wrap-layout2 {
+        background-color: #eff4f6;
+        background-image: url('img/figure/figure7.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+
+    .progress-wrap-layout3 {
+        background-color: #f3f3f3;
+        background-image: url('img/figure/figure13.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    @media only screen and (max-width: 1199px) {
+        .progress-wrap-layout3 {
+            background-size: cover;
+        }
+    }
+
+    .progress-box-layout1 {
+        background-color: #ffffff;
+        border-radius: 4px;
+        padding: 5.5rem 7rem 6.5rem;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .progress-box-layout1 {
+            padding: 3rem 3rem 6rem;
+        }
+    }
+
+    @media only screen and (max-width: 575px) {
+        .progress-box-layout1 {
+            padding: 3rem 3rem 0;
+        }
+    }
+
+    .progress-box-layout1 .item-title {
+        font-weight: 600;
+        margin-bottom: 10rem;
+    }
+
+    .progress-box-layout1 .item-content .counter-item {
+        position: relative;
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 575px) {
+        .progress-box-layout1 .item-content .counter-item {
+            margin-bottom: 12rem;
+        }
+
+        .progress-box-layout1 .item-content .counter-item [class^="col-"] .counter-item:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .progress-box-layout1 .item-content .counter-item .count-number {
+        font-size: 60px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        color: #416327;
+        margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 575px) {
+        .progress-box-layout1 .item-content .counter-item .count-number {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .progress-box-layout1 .item-content .counter-item .count-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .progress-box-layout1 .item-content .counter-item .bg-icon {
+        position: absolute;
+        top: -55px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        font-size: 150px;
+        color: #f3f3f3;
+    }
+
+    @media only screen and (max-width: 575px) {
+        .progress-box-layout1 .item-content .counter-item .bg-icon {
+            font-size: 130px;
+        }
     }
 </style>
 
@@ -312,13 +424,65 @@
                     <p>
                         Certified Cleaning Company.
                     </p>
-                    <a class="btn" href="">Learn More</a>
+                    <a class="btn" href="{% url 'about' %}">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- About End -->
+
+<!-- Progress Area Start Here -->
+<div class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-6">
+                <div class="section-header">
+                    <h2>We have Fully Trusted Team</h2>
+                </div>
+                <section class="progress-wrap-layout3 section-padding-12">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="progress-box-layout1">
+
+                                <div class="item-content">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="counter-item">
+                                                <div class="counter count-number" data-num="1389">1389</div>
+                                                <div class="count-title">Work Done</div>
+                                                <div class="bg-icon"><i class="far fa-thumbs-up"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="counter-item">
+                                                <div class="counter count-number" data-num="1380">1380</div>
+                                                <div class="count-title">Happy Clients</div>
+                                                <div class="bg-icon"><i class="far fa-smile"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+                <div class="about-img">
+                    <img src="{% static 'img/cleaning4.jpg' %}" alt="Image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Progress Area End Here -->
 
 <!-- Feature Start -->
 <div class="feature">

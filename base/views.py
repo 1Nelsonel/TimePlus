@@ -29,5 +29,5 @@ def blog(request):
     return render(request, 'base/blog.html', context)
 
 def contact(request):
-    context ={}
-    return render(request, 'blog/context.html', context)
+    context = {}
+    return render(request, 'base/contact.html', context)

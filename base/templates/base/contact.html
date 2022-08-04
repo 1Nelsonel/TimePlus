@@ -1,0 +1,126 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    .page-header {
+        background-color: #62923d !important;
+    }
+
+    .section-header h2 {
+
+        color: #416327 !important;
+    }
+
+    .contact .contact-info {
+        background: #416327 !important;
+    }
+
+    .contact .contact-item {
+        border: 2px solid #000 !important;
+    }
+
+    .contact .contact-item i {
+        color: #fef22e !important;
+        border: 2px solid #ffff !important;
+    }
+
+    .contact .contact-text h2 {
+        color: #fef22e !important;
+    }
+
+    .contact .contact-text p {
+        color: #000 !important;
+        
+    }
+    .a-link {
+        color: #000;
+    }
+    .btn {
+        background-color: #416327 !important;
+        color: white !important;
+    }
+    .btn:hover {
+        background-color: #fef22e !important;
+        color: #000 !important;
+    }
+</style>
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Contact Start -->
+<div class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h2>Location</h2>
+                            <p><a class="a-link" href="#">Haile Selassie Avenue</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-phone-alt"></i>
+                        <div class="contact-text">
+                            <h2>Phone</h2>
+                            <p><a class="a-link " href="tel:+254792280216">+254792280216</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <div class="contact-text">
+                            <h2>Email</h2>
+                            <p><a class="a-link " href="mailto:info@tpcleaning.co.ke">info@tpcleaning.co.ke</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" required="required"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock %}

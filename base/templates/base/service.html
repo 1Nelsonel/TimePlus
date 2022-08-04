@@ -4,10 +4,13 @@
 
 {% load static %}
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
 <style>
     .page-header {
         background-color: #416327 !important;
     }
+
     .section-header h2 {
 
         color: #416327 !important;
@@ -87,10 +90,21 @@
         color: #000 !important;
 
     }
+    
+    .appointment {
+        background-color: #416327 !important;
+    }
+    .btn-primary {
+        background-color: #62923d;
+    }
+    .btn-primary:hover {
+        background-color: #fef22e;
+        color: #000;
+    }
 </style>
 
- <!-- Page Header Start -->
- <div class="page-header">
+<!-- Page Header Start -->
+<div class="page-header">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -135,7 +149,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-item">
                     <div class="service-icon">
-                        <img src="{% static 'img/service2.jpg' %}" width="100%"  alt="">
+                        <img src="{% static 'img/service2.jpg' %}" width="100%" alt="">
                     </div>
                     <h3>Commercial Cleaning</h3>
                     <p>Kitchen</p>
@@ -151,7 +165,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-item">
                     <div class="service-icon">
-                        <img src="{% static 'img/service3.jpg' %}" width="100%"  alt="">
+                        <img src="{% static 'img/service3.jpg' %}" width="100%" alt="">
                     </div>
                     <h3>Office Cleaning</h3>
                     <p>Vacuuming Carpet</p>
@@ -219,6 +233,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-5">
                 <div class="feature-img">
                     <img src="{%static 'img/img-6.png' %}" alt="Feature">
@@ -228,5 +243,108 @@
     </div>
 </div>
 <!-- Feature End -->
+
+<!-- Appointment Start -->
+<div class="appointment container-fluid py-5">
+    <div class="container py-5">
+        <div class="bg-appointment rounded">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 py-5">
+                    <div class="rounded p-5 my-5" style="background: rgba(13, 14, 13, 0.7);">
+                        <h1 class="text-center text-white mb-4">Get An Appointment</h1>
+                        <form>
+
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option value="0">Property Type</option>
+                                    <option value="Bungalow">Bungalow</option>
+                                    <option value="Mansionete Apartment">Mansionete Apartment</option>
+                                    <option value="Plot">Plot</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <select class="custom-select border-0 px-4" style="height: 47px;">
+                                            <option value="0">-- Bedrooms --</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <select class="custom-select border-0 px-4" style="height: 47px;">
+                                            <option value="0">-- Frequency --</option>
+                                            <option value="Daily">Daily</option>
+                                            <option value="Monthly">Monthly</option>
+                                            <option value="Yearly">Yearly</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="date" id="date" data-target-input="nearest">
+                                            <input type="date" class="form-control border-0 p-4 datetimepicker-input"
+                                                placeholder="Select Date" data-target="#date"
+                                                data-toggle="datetimepicker" data-error="Message field is required" required/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="time" id="time" data-target-input="nearest">
+                                            <input type="time" class="form-control border-0 p-4 datetimepicker-input"
+                                                placeholder="Select Time" data-target="#time"
+                                                data-toggle="datetimepicker" data-error="Message field is required" required/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0 p-4" placeholder="Your Name"
+                                        data-error="Message field is required" required />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control border-0 p-4" placeholder="Your Phone"
+                                        data-error="Message field is required" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email"
+                                data-error="Message field is required" required />
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control border-0 p-4"  name="message" id="" width="100%"  data-error="Message field is required" required>Say something</textarea>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An
+                                    Appointment</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->
+
+
 
 {% endblock %}

@@ -1,10 +1,70 @@
 {% load static %}
+<style>
+    .newsletter {
+        background: #416327 !important;
+      
+    }
+
+    .newsletter .section-header h2::before,
+    .newsletter .section-header h2::after {
+        border-color: #ffffff;
+    }
+
+    .newsletter input {
+        height: 50px;
+        border: 2px solid #121518;
+        border-radius: 0;
+    }
+
+    .newsletter .btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 40px;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #aa9166;
+        background: #121518;
+        border-radius: 0;
+        border: 2px solid #aa9166;
+        transition: .3s;
+    }
+
+    .newsletter .btn:hover {
+        color: #121518;
+        background: #aa9166;
+    }
+    .text-dark{
+        color: rgb(255, 255, 255) !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
+    .btn {
+        background-color: #416327 !important;
+        color: #ffffff !important;
+    }
+    .btn:hover {
+        background-color: #fef22e !important;
+        color: #000 !important;
+    }
+    .f-link {
+        color: white !important;
+    }
+    .f-link:hover {
+        color: #aa9166 !important;
+    }
+    .footer-link {
+        color: white !important;
+    }
+</style>
 
 <!-- Newsletter Start -->
 <div class="newsletter">
     <div class="container">
-        <div class="section-header">
-            <h2>Subscribe Our Newsletter</h2>
+        <div class="">
+            <h2 class="text-dark">Subscribe Our Newsletter</h2>
         </div>
         <div class="form">
             <input class="form-control" placeholder="Email here">
@@ -21,50 +81,50 @@
             <div class="col-md-6 col-lg-4">
                 <div class="footer-about">
                     <h2>About Us</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu lectus a leo tristique dictum nec non quam. Suspendisse convallis, tortor eu placerat rhoncus, lorem quam iaculis felis, sed eleifend lacus neque id eros. Integer convallis volutpat neque
+                    <p class="f-link">
+                        We are certified cleaners professionals, company located in Nairobi Kenya, providing both office commercial, 
+                        residencial and general cleaning services at affordable costs. We support both regular, monthly and yearly 
+                        cleaning services for all our customers within and outside Nairobi County.
                     </p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-8">
                 <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="footer-link">
-                    <h2>Services Areas</h2>
-                    <a href="">Civil Law</a>
-                    <a href="">Family Law</a>
-                    <a href="">Business Law</a>
-                    <a href="">Education Law</a>
-                    <a href="">Immigration Law</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="footer-link">
-                    <h2>Useful Pages</h2>
-                    <a href="">About Us</a>
-                    <a href="">Practices</a>
-                    <a href="">Attorneys</a>
-                    <a href="">Case Studies</a>
-                    <a href="">FAQs</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="footer-contact">
-                    <h2>Get In Touch</h2>
-                    <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope"></i>info@example.com</p>
-                    <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-link">
+                            <h2>Services Areas</h2>
+                            <a class="f-link" href="">Residential Cleaning</a>
+                            <a class="f-link" href="">Commercial Cleaning</a>
+                            <a class="f-link" href="">Office Cleaning</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-link">
+                            <h2>Useful Pages</h2>
+                            <a class="f-link" href="{% url 'about' %}">About Us</a>
+                            <a class="f-link" href="{% url 'service' %}">Services</a>
+                            <a class="f-link" href="{% url 'team' %}">Our Team</a>
+                            <a class="f-link" href="{% url 'faq' %}">FAQs</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-contact">
+                            <h2>Get In Touch</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Haile Selassie Avenue</p>
+                            <p><i class="fa fa-phone-alt"></i><a class="f-link" href="tel:+254792280216">+254792280216</a></p>
+                            <p><i class="fa fa-envelope"></i><a class="f-link" href="mailto:info@tpcleaning.co.ke">info@tpcleaning.co.ke</a></p>
+                            <div class="footer-social">
+                                <a href="https://mobile.twitter.com/TimeplusC"><i class="fab fa-twitter"></i></a>
+                                <a href="https://web.facebook.com/Timeplus-cleaning-services-103028755004926"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.youtube.com/channel/UCRoF2dh1x2lZP5sILOgjy-A"><i class="fab fa-youtube"></i></a>
+                                <a href="https://instagram.com/stories/timeplus5/2824994537215823445?utm_source=ig_story_item_share&igshid=MDJmNzVkMjY="><i class="fab fa-instagram"></i></a>
+                                <!-- <a href=""><i class="fab fa-linkedin-in"></i></a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
         </div>
     </div>
     <div class="container footer-menu">
@@ -79,7 +139,8 @@
     <div class="container copyright">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; {% now 'Y' %} <a href="https://htmlcodex.com/law-firm-website-template">TimePlus cleaners </a>, All Right Reserved.</p>
+                <p>&copy; {% now 'Y' %} <a href="https://tpcleaning.co.ke">TimePlus cleaners
+                    </a>, All Right Reserved.</p>
             </div>
             <div class="col-md-6">
                 <p>Designed By <a href="https://nelsoneltech.co.ke">NelsonelTech Solutions</a></p>

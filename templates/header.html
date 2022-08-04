@@ -15,9 +15,10 @@
 
     .top-bar .logo h2 {
         margin: 0;
-        color: #ffffff;
+        color: #fef22e !important;
         font-weight: 800;
     }
+    
 
     .top-bar .logo img {
         max-width: 100%;
@@ -28,6 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        color: #fef22e !important;
     }
 
     .top-bar .text {
@@ -82,13 +84,16 @@
         color: #aa9166;
         background: #ffffff;
     }
+    a .top-link:hover{
+        color: #fff !important;
+    }
 
     .top-link {
-        color: #ffffff !important;
+        color: #fef22e !important;
     }
 
     .top-link:hover {
-        color: #aa9166 !important;
+        color: #ffffff !important;
     }
 
     .call-anamate {
@@ -147,7 +152,7 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{% url 'home' %}">
                         <h2 class="top-link">TimePlus Cleaning</h2>
                         <!-- <img src="{% static 'img/timeplus.png' %}" alt="Logo"> -->
                     </a>
@@ -186,7 +191,7 @@
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="navbar-nav mr-5 font-weight-bold">
                 <a href="{% url 'home' %}">
-                    <img src="{% static 'img/timeplus.png' %}" height="100" width="100" alt="Logo">
+                    <img src="{% static 'img/timeplus_logo.png' %}" height="60" width="140" alt="Logo">
                 </a>
             </div>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">

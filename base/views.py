@@ -19,3 +19,7 @@ def about(request):
 def team(request):
     context = {}
     return render(request, 'base/team.html', context)
+
+def fag(request):
+    context = {}
+    return render(request, 'base/faq.html', context)

@@ -310,6 +310,10 @@
             font-size: 130px;
         }
     }
+    .btn {
+        color: #416327 !important;
+        padding: 10px !important;
+    }
 </style>
 
 
@@ -780,111 +784,23 @@
             <h2>Latest From Blog</h2>
         </div>
         <div class="owl-carousel blog-carousel">
+            {% for blog in blogs %}
             <div class="blog-item">
-                <img src="img/blog-1.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
+                <img src="{{ blog.image.url }}" width="100%" height="200" alt="TimePlus Cleaning Blog">
+                <h3>{{ blog.title }}</h3>
                 <div class="meta">
                     <i class="fa fa-list-alt"></i>
-                    <a href="">Civil Law</a>
+                    <a href="">{{ blog.service }}</a>
                     <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
+                    <p>{{ blog.created | timesince }} :ago</p>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
+                    {{ blog.description|truncatewords:15}}
                 </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                <a class="btn" href="{% url 'blogDetail' blog.id %}">Read More <i class="fa fa-angle-right"></i></a>
             </div>
-            <div class="blog-item">
-                <img src="img/blog-2.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
-                <div class="meta">
-                    <i class="fa fa-list-alt"></i>
-                    <a href="">Family Law</a>
-                    <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
-                </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-            <div class="blog-item">
-                <img src="img/blog-3.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
-                <div class="meta">
-                    <i class="fa fa-list-alt"></i>
-                    <a href="">Business Law</a>
-                    <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
-                </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-            <div class="blog-item">
-                <img src="img/blog-1.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
-                <div class="meta">
-                    <i class="fa fa-list-alt"></i>
-                    <a href="">Education Law</a>
-                    <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
-                </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-            <div class="blog-item">
-                <img src="img/blog-2.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
-                <div class="meta">
-                    <i class="fa fa-list-alt"></i>
-                    <a href="">Criminal Law</a>
-                    <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
-                </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-            <div class="blog-item">
-                <img src="img/blog-3.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
-                <div class="meta">
-                    <i class="fa fa-list-alt"></i>
-                    <a href="">Cyber Law</a>
-                    <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
-                </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-            <div class="blog-item">
-                <img src="img/blog-1.jpg" alt="Blog">
-                <h3>Lorem ipsum dolor</h3>
-                <div class="meta">
-                    <i class="fa fa-list-alt"></i>
-                    <a href="">Business Law</a>
-                    <i class="fa fa-calendar-alt"></i>
-                    <p>01-Jan-2045</p>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    vulputate. Aliquam metus tortor
-                </p>
-                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
+            {% endfor %}
+           
         </div>
     </div>
 </div>

@@ -9,7 +9,8 @@ from base.models import Message, Blog, Comment, Service
 
 
 def home(request):
-    context = {}
+    blogs = Blog.objects.all()
+    context = {'blogs': blogs}
     return render(request, 'base/home.html', context)
 
 

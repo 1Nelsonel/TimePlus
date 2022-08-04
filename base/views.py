@@ -23,3 +23,11 @@ def team(request):
 def fag(request):
     context = {}
     return render(request, 'base/faq.html', context)
+
+def blog(request):
+    context = {}
+    return render(request, 'base/blog.html', context)
+
+def contact(request):
+    context ={}
+    return render(request, 'blog/context.html', context)

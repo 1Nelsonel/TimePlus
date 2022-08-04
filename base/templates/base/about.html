@@ -1,0 +1,180 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    .page-header {
+        background-color: #416327 !important;
+    }
+    .section-header h2 {
+
+        color: #416327 !important;
+    }
+
+    h3 {
+        color: #416327 !important;
+    }
+
+    .about .about-text a.btn {
+
+        color: #fff !important;
+        border: 2px solid #000 !important;
+
+        background: #416327 !important;
+        transition: .3s;
+    }
+
+    .about .about-text a.btn:hover {
+        color: #000 !important;
+        background: #fef22e !important;
+    }
+
+    .team .team-text {
+        position: relative;
+        padding: 50px 15px 30px 15px;
+        text-align: center;
+        background: #416327 !important;
+    }
+
+    .team .team-text h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fef22e !important;
+    }
+
+    .team .team-text p {
+        margin: 0;
+        color: #ffffff !important;
+    }
+</style>
+
+ <!-- Page Header Start -->
+ <div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>About Us</h2>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- About Start -->
+<div class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="about-img">
+                    <img src="{% static 'img/cleaning1.jpg' %}" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <div class="section-header">
+                    <h2>Learn About Us</h2>
+                </div>
+                <div class="about-text">
+                    <p>
+                        We are certified cleaners professionals, company located in Nairobi Kenya, providing both office
+                        commercial, residencial and general cleaning services at affordable costs.
+                        We support both regular, monthly and yearly cleaning services for all our customers within and
+                        outside Nairobi County.
+                    </p>
+                    <p>
+                        Certified Cleaning Company.
+                    </p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header">
+            <h2>Meet Our Expert</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team1.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>John Paul</h2>
+                        <p>Matress Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team2.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Rachael Kaniru</h2>
+                        <p>Carpet Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team3.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Brian Johnson</h2>
+                        <p>Movers</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team4.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Judith Akinyi</h2>
+                        <p>Office Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+{% endblock %}

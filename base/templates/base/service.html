@@ -1,0 +1,232 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    .page-header {
+        background-color: #416327 !important;
+    }
+    .section-header h2 {
+
+        color: #416327 !important;
+    }
+
+    .service {
+        background-color: #416327 !important;
+    }
+
+    h3 {
+        color: #416327 !important;
+    }
+
+    .service .service-item {
+
+        background: #f3f5f7 !important;
+
+    }
+
+    .service .service-icon {
+
+        background: #d4cfcf !important;
+    }
+
+    .service .service-icon i {
+
+        color: #aa9166;
+        background: #121518;
+        transition: .5s;
+    }
+
+    .service .service-item p {
+        margin: 0;
+        color: #999999;
+        padding: 0 25px 25px 25px;
+        font-size: 18px;
+        align-items: flex-start !important;
+    }
+
+    .service .service-item a.btn {
+        color: #fff !important;
+        border: 2px solid #000 !important;
+        background: #416327 !important;
+        transition: .3s;
+    }
+
+    .service .service-item:hover a.btn {
+        color: #000 !important;
+        background: #fef22e !important;
+    }
+
+    .service .service-item p {
+        color: #000 !important;
+    }
+
+    .feature .feature-icon {
+        height: 180px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #416327 !important;
+    }
+
+    .feature .feature-icon i {
+        width: 100px;
+        height: 100px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 60px;
+        color: #fef22e !important;
+        background: #416327 !important;
+        transition: .5s;
+    }
+
+    .feature-top .feature-item p {
+        color: #000 !important;
+
+    }
+</style>
+
+ <!-- Page Header Start -->
+ <div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Our Services</h2>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'service' %}">Our Services</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Service Start -->
+<div class="service">
+    <div class="container">
+        <div class="section-header">
+            <h1>Our Cleaning Service</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="{% static 'img/service1.jpg' %}" width="400" height="200" alt="">
+                    </div>
+                    <h3>Residential Cleaning</h3>
+
+
+                    <p>Kitchen</p>
+                    <p>Bathrooms</p>
+                    <p>Bedrooms</p>
+                    <p>Windows</p>
+                    <p>Carpet</p>
+                    <p>Move in/out</p>
+
+
+
+
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="{% static 'img/service2.jpg' %}" width="400" height="200" alt="">
+                    </div>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Kitchen</p>
+                    <p>Bathrooms</p>
+                    <p>Bedrooms</p>
+                    <p>Windows</p>
+                    <p>Carpet</p>
+                    <p>Move in/out</p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="{% static 'img/service3.jpg' %}" width="400" height="200" alt="">
+                    </div>
+                    <h3>Office Cleaning</h3>
+                    <p>Vacuuming Carpet</p>
+                    <p>Mopping Floor</p>
+                    <p>Peripheral Device</p>
+                    <p>Desk Cleaning</p>
+                    <p>Arranging Cabbles</p>
+                    <p>Move in/out</p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Feature Start -->
+<div class="feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="section-header">
+                    <h2>Why Choose Us</h2>
+                </div>
+                <div class="row align-items-center feature-item">
+                    <div class="col-5">
+                        <div class="feature-icon">
+                            <i class="fa fa-gavel"></i>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h3>Best cleaning services</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulputate.
+                        </p>
+                    </div>
+                </div>
+                <div class="row align-items-center feature-item">
+                    <div class="col-5">
+                        <div class="feature-icon">
+                            <i class="fa fa-balance-scale"></i>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h3>Efficiency & Trust</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulputate.
+                        </p>
+                    </div>
+                </div>
+                <div class="row align-items-center feature-item">
+                    <div class="col-5">
+                        <div class="feature-icon">
+                            <i class="far fa-smile"></i>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h3>Results you deserve</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulputate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="feature-img">
+                    <img src="{%static 'img/img-6.png' %}" alt="Feature">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+{% endblock %}

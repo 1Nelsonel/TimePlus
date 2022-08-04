@@ -1,0 +1,866 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+<style>
+    .carousel .carousel-caption h1 {
+        color: #ffffff !important;
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .carousel .carousel-caption p {
+        color: #000000 !important;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .carousel .carousel-caption .btn {
+        color: #fff !important;
+        background: #416327 !important;
+
+    }
+
+    .carousel .carousel-caption .btn:hover {
+        color: #000 !important;
+        background: #fef22e !important;
+    }
+
+    /*******************************/
+    /******** Top Feature CSS ******/
+    /*******************************/
+    .feature-top {
+        position: relative;
+        background: #416327 !important;
+        color: #fef22e !important;
+        margin-bottom: 45px;
+    }
+
+
+
+    .section-header h2 {
+
+        color: #416327 !important;
+    }
+
+    h3 {
+        color: #416327 !important;
+    }
+
+    .service {
+        background-color: #416327 !important;
+    }
+
+    h1 {
+        color: #ffffff !important;
+    }
+
+    .service .service-item {
+
+        background: #f3f5f7 !important;
+
+    }
+
+    .service .service-icon {
+
+        background: #d4cfcf !important;
+    }
+
+    .service .service-icon i {
+
+        color: #aa9166;
+        background: #121518;
+        transition: .5s;
+    }
+
+    .service .service-item p {
+        margin: 0;
+        color: #999999;
+        padding: 0 25px 25px 25px;
+        font-size: 18px;
+        align-items: flex-start !important;
+    }
+
+    .feature .feature-icon {
+        height: 180px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #416327 !important;
+    }
+
+    .feature .feature-icon i {
+        width: 100px;
+        height: 100px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 60px;
+        color: #fef22e !important;
+        background: #416327 !important;
+        transition: .5s;
+    }
+
+    .about .about-text a.btn {
+
+        color: #fff !important;
+        border: 2px solid #000 !important;
+
+        background: #416327 !important;
+        transition: .3s;
+    }
+
+    .feature-top .feature-item p {
+        color: #000 !important;
+
+    }
+
+    .about .about-text a.btn:hover {
+        color: #000 !important;
+        background: #fef22e !important;
+    }
+
+    .service .service-item a.btn {
+        color: #fff !important;
+        border: 2px solid #000 !important;
+        background: #416327 !important;
+        transition: .3s;
+    }
+
+    .service .service-item:hover a.btn {
+        color: #000 !important;
+        background: #fef22e !important;
+    }
+
+    .service .service-item p {
+        color: #000 !important;
+    }
+
+    .team .team-text {
+        position: relative;
+        padding: 50px 15px 30px 15px;
+        text-align: center;
+        background: #416327 !important;
+    }
+
+    .team .team-text h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fef22e !important;
+    }
+
+    .team .team-text p {
+        margin: 0;
+        color: #ffffff !important;
+    }
+
+    .faqs .card-header a span {
+
+        background: #416327 !important;
+        color: #fef22e !important;
+
+    }
+
+    .faqs a.btn {
+
+        color: #f3f5f7 !important;
+        border: 2px solid #000 !important;
+        background: #416327 !important;
+
+    }
+
+    .faqs a.btn:hover {
+        color: #000 !important;
+        background: #fef22e !important;
+    }
+
+    .testimonial .testimonial-item {
+        background: #416327 !important;
+        
+    }
+
+    .testimonial .testimonial-item i {
+       
+        color: #fef22e !important;
+       
+    }
+    .client-text{
+        color: rgb(255, 255, 255) !important;
+    }
+    .client-head {
+        color: #fef22e !important;
+    }
+</style>
+
+
+<!-- Carousel Start -->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'img/banner1.jpg' %}" alt="TimePlus Cleaners">
+            <div class="carousel-caption">
+                <p class="animated fadeInRight">TimePlus Cleaning</p>
+                <h1 class="animated fadeInLeft">We Offer Residential Cleaning</h1>
+
+                <a class="btn animated fadeInUp" href="#">Get free consultation</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'img/cleaning4.jpg' %}" alt="TimePlus Cleaners">
+            <div class="carousel-caption">
+                <p class="animated fadeInRight">TimePlus Cleaning</p>
+                <h1 class="animated fadeInLeft">We Offer Office Cleaning</h1>
+
+                <a class="btn animated fadeInUp" href="#">Get free consultation</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'img/cleaning1.jpg' %}" alt="TimePlus Cleaners">
+            <div class="carousel-caption">
+                <p class="animated fadeInRight">Carpet Cleaning Services</p>
+                <h1 class="animated fadeInLeft">We Offer Commercial Cleaning</h1>
+
+                <a class="btn animated fadeInUp" href="#">Get free consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Carousel End -->
+
+
+<!-- Top Feature Start-->
+<div class="feature-top">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-item ">
+                    <i class="far fa-check-circle"></i>
+                    <p>Trusted
+                        Cleaners</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-item">
+                    <i class="far fa-smile"></i>
+                    <p>Best
+                        Quality Work</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-item">
+                    <i class="far fa-thumbs-up"></i>
+                    <p>On TIme &
+                        Reliable</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-item">
+                    <i class="far fa-handshake"></i>
+                    <p>24/7
+                        Support Team</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top Feature End-->
+
+
+<!-- About Start -->
+<div class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="about-img">
+                    <img src="{% static 'img/cleaning1.jpg' %}" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <div class="section-header">
+                    <h2>Learn About Us</h2>
+                </div>
+                <div class="about-text">
+                    <p>
+                        We are certified cleaners professionals, company located in Nairobi Kenya, providing both office
+                        commercial, residencial and general cleaning services at affordable costs.
+                        We support both regular, monthly and yearly cleaning services for all our customers within and
+                        outside Nairobi County.
+                    </p>
+                    <p>
+                        Certified Cleaning Company.
+                    </p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Service Start -->
+<div class="service">
+    <div class="container">
+        <div class="section-header">
+            <h1>Our Cleaning Service</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="{% static 'img/service1.jpg' %}" width="400" height="200" alt="">
+                    </div>
+                    <h3>Residential Cleaning</h3>
+
+
+                    <p>Kitchen</p>
+                    <p>Bathrooms</p>
+                    <p>Bedrooms</p>
+                    <p>Windows</p>
+                    <p>Carpet</p>
+                    <p>Move in/out</p>
+
+
+
+
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="{% static 'img/service2.jpg' %}" width="400" height="200" alt="">
+                    </div>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Kitchen</p>
+                    <p>Bathrooms</p>
+                    <p>Bedrooms</p>
+                    <p>Windows</p>
+                    <p>Carpet</p>
+                    <p>Move in/out</p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="{% static 'img/service3.jpg' %}" width="400" height="200" alt="">
+                    </div>
+                    <h3>Office Cleaning</h3>
+                    <p>Vacuuming Carpet</p>
+                    <p>Mopping Floor</p>
+                    <p>Peripheral Device</p>
+                    <p>Desk Cleaning</p>
+                    <p>Arranging Cabbles</p>
+                    <p>Move in/out</p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Feature Start -->
+<div class="feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="section-header">
+                    <h2>Why Choose Us</h2>
+                </div>
+                <div class="row align-items-center feature-item">
+                    <div class="col-5">
+                        <div class="feature-icon">
+                            <i class="fa fa-gavel"></i>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h3>Best cleaning services</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulputate.
+                        </p>
+                    </div>
+                </div>
+                <div class="row align-items-center feature-item">
+                    <div class="col-5">
+                        <div class="feature-icon">
+                            <i class="fa fa-balance-scale"></i>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h3>Efficiency & Trust</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulputate.
+                        </p>
+                    </div>
+                </div>
+                <div class="row align-items-center feature-item">
+                    <div class="col-5">
+                        <div class="feature-icon">
+                            <i class="far fa-smile"></i>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h3>Results you deserve</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulputate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="feature-img">
+                    <img src="{%static 'img/img-6.png' %}" alt="Feature">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header">
+            <h2>Meet Our Expert</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team1.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>John Paul</h2>
+                        <p>Matress Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team2.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Rachael Kaniru</h2>
+                        <p>Carpet Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team3.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Brian Johnson</h2>
+                        <p>Movers</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team4.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Judith Akinyi</h2>
+                        <p>Office Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+<!-- FAQs Start -->
+<div class="faqs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="faqs-img">
+                    <img src="{%static 'img/img-7.png' %}" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="section-header">
+                    <h2>Have A Questions?</h2>
+                </div>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                <span>1</span> Do i have to sign a contract?
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                We offer both contract services and non- contract services.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                <span>2</span> Will i always have the same house cleaner?
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Right! We have a number of trusted house cleaners. They rotate so as to provide
+                                a wider range of experince, however if the client needs the same house cleaner he or she
+                                can be assigned.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                <span>3</span> Do you Guatantee your work?
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                We have a team of professionals who give 100% guarantee.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                <span>4</span>How i can make payment?
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                We accept both cash and mpesa payment.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseFive">
+                                <span>5</span> Can i have cleaning professionals for a month?
+                            </a>
+                        </div>
+                        <div id="collapseFive" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Sure we offer professionals cleaning services on monthly basis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn" href="">Ask more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQs End -->
+
+
+<!-- Testimonial Start -->
+<div class="testimonial">
+    <div class="container">
+        <div class="section-header">
+            <h2>Review From Client</h2>
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="{ static 'img/cleaning1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="img/testimonial-2.jpg" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="img/testimonial-3.jpg" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="img/testimonial-4.jpg" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="img/testimonial-1.jpg" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="img/testimonial-2.jpg" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <i class="fa fa-quote-right"></i>
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="img/testimonial-3.jpg" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h2 class="client-head">Client Name</h2>
+                        <p class="client-text">Profession</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="client-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+<!-- Blog Start -->
+<div class="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2>Latest From Blog</h2>
+        </div>
+        <div class="owl-carousel blog-carousel">
+            <div class="blog-item">
+                <img src="img/blog-1.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Civil Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="blog-item">
+                <img src="img/blog-2.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Family Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="blog-item">
+                <img src="img/blog-3.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Business Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="blog-item">
+                <img src="img/blog-1.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Education Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="blog-item">
+                <img src="img/blog-2.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Criminal Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="blog-item">
+                <img src="img/blog-3.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Cyber Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="blog-item">
+                <img src="img/blog-1.jpg" alt="Blog">
+                <h3>Lorem ipsum dolor</h3>
+                <div class="meta">
+                    <i class="fa fa-list-alt"></i>
+                    <a href="">Business Law</a>
+                    <i class="fa fa-calendar-alt"></i>
+                    <p>01-Jan-2045</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                    vulputate. Aliquam metus tortor
+                </p>
+                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% load static %}
+
+<style>
+    .top-bar {
+        background: #416327 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .top-bar .logo h2 {
+        margin: 0;
+        color: #ffff !important;
+       
+    }
+
+    .nav-bar,
+    .nav-bar .navbar {
+        background: #fff !important;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #416327 !important;
+        border-radius: 10% !important;
+        padding: 20px !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 10px 10px 8px 10px;
+        color: #416327 !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: #aa9166 !important;
+        transition: none;
+    }
+
+
+
+    .nav-bar .btn {
+        color: #416327 !important;
+        border: 2px solid #aa9166;
+        border-radius: 0;
+    }
+
+    .nav-bar .btn:hover {
+        background: #aa9166 !important;
+    }
+</style>
+<!-- Top Bar Start -->
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="logo">
+                    <a href="index.html">
+                        <h2>TimePlus Cleaning</h2>
+                        <!-- <img src="{% static 'img/timeplus.png' %}" alt="Logo"> -->
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="top-bar-right">
+                    <div class="text">
+                        <h2>8:00 - 9:00</h2>
+                        <p>Opening Hour Mon - Fri</p>
+                    </div>
+                    <div class="text">
+                        <h2>+123 456 7890</h2>
+                        <p>Call Us For Free Consultation</p>
+                    </div>
+                    <div class="social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top Bar End -->
+
+<!-- Nav Bar Start -->
+<div class="nav-bar">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="navbar-nav mr-5 font-weight-bold">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/timeplus.png' %}" height="100" width="100" alt="Logo">
+                </a>                
+            </div>            
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                
+                <div class="navbar-nav m-auto font-weight-bold">
+                    <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                    <a href="{% url 'service' %}" class="nav-item nav-link">Services</a>
+                    <a href="{% url 'team' %}" class="nav-item nav-link">Our Team</a>
+                    <a href="portfolio.html" class="nav-item nav-link">FAQs</a>
+                    <a href="contact.html" class="nav-item nav-link">Blogs</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="ml-auto">
+                    <div class="item-icon">
+                        <i class="flaticon-phone-call"></i>
+                    </div>
+                    <div class="item-content">
+                        
+                        <div class="item-number"><i class="fa fa-phone dark "> 0792280216</i></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Nav Bar End -->

@@ -1,0 +1,132 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    .page-header {
+        background-color: #416327 !important;
+    }
+
+    .section-header h2 {
+
+        color: #416327 !important;
+    }
+
+    .team .team-text {
+        position: relative;
+        padding: 50px 15px 30px 15px;
+        text-align: center;
+        background: #416327 !important;
+    }
+
+    .team .team-text h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fef22e !important;
+    }
+
+    .team .team-text p {
+        margin: 0;
+        color: #ffffff !important;
+    }
+</style>
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Our Team</h2>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'team' %}">Our Team</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header">
+            <h2>Meet Our Expert</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team1.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>John Paul</h2>
+                        <p>Matress Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team2.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Rachael Kaniru</h2>
+                        <p>Carpet Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team3.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Brian Johnson</h2>
+                        <p>Movers</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{%static 'img/team4.png' %}" alt="Team Image">
+                    </div>
+                    <div class="team-text">
+                        <h2>Judith Akinyi</h2>
+                        <p>Office Cleaner</p>
+                        <div class="team-social">
+                            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+{% endblock %}

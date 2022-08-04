@@ -2,15 +2,105 @@
 
 <style>
     .top-bar {
+        position: relative;
+        height: 90px;
         background: #416327 !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
+    }
+
+    .top-bar .logo {
+        padding: 15px 0;
+        text-align: left;
+        overflow: hidden;
     }
 
     .top-bar .logo h2 {
         margin: 0;
-        color: #ffff !important;
-       
+        color: #ffffff;
+        font-weight: 800;
+    }
+
+    .top-bar .logo img {
+        max-width: 100%;
+        max-height: 60px;
+    }
+
+    .top-bar .top-bar-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .top-bar .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90px;
+        padding: 0 20px;
+        text-align: center;
+        border-left: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .top-bar .text h2 {
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .top-bar .text p {
+        color: #ffffff;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .top-bar .social {
+        display: flex;
+        height: 90px;
+        font-size: 0;
+        justify-content: flex-end;
+    }
+
+    .top-bar .social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 100%;
+        font-size: 22px;
+        color: #ffffff;
+        border-right: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .top-bar .social a:first-child {
+        border-left: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .top-bar .social a:hover {
+        color: #aa9166;
+        background: #ffffff;
+    }
+
+    .top-link {
+        color: #ffffff !important;
+    }
+
+    .top-link:hover {
+        color: #aa9166 !important;
+    }
+
+    .call-anamate {
+        color: #416327 !important;
+    }
+
+    .call-link {
+        color: #416327 !important;
+    }
+
+    .call-link:hover {
+        color: #aa9166 !important;
     }
 
     .nav-bar,
@@ -29,7 +119,11 @@
         color: #416327 !important;
     }
 
-    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: #aa9166 !important;
+        transition: none;
+    }
+
     .navbar-dark .navbar-nav .nav-link.active {
         color: #aa9166 !important;
         transition: none;
@@ -54,7 +148,7 @@
             <div class="col-lg-5">
                 <div class="logo">
                     <a href="index.html">
-                        <h2>TimePlus Cleaning</h2>
+                        <h2 class="top-link">TimePlus Cleaning</h2>
                         <!-- <img src="{% static 'img/timeplus.png' %}" alt="Logo"> -->
                     </a>
                 </div>
@@ -62,18 +156,22 @@
             <div class="col-lg-7">
                 <div class="top-bar-right">
                     <div class="text">
-                        <h2>8:00 - 9:00</h2>
-                        <p>Opening Hour Mon - Fri</p>
+                        <h2><a class="top-link" href="mailto:info@tpcleaning.co.ke">info@tpcleaning.co.ke</a></h2>
+
                     </div>
                     <div class="text">
-                        <h2>+123 456 7890</h2>
-                        <p>Call Us For Free Consultation</p>
+                        <h2><a class="top-link" href="tel:+254792280216">+254792280216</a></h2>
+
                     </div>
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href="https://mobile.twitter.com/TimeplusC"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/Timeplus-cleaning-services-103028755004926"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UCRoF2dh1x2lZP5sILOgjy-A"><i
+                                class="fab fa-youtube"></i></a>
+                        <a
+                            href="https://instagram.com/stories/timeplus5/2824994537215823445?utm_source=ig_story_item_share&igshid=MDJmNzVkMjY="><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -89,14 +187,14 @@
             <div class="navbar-nav mr-5 font-weight-bold">
                 <a href="{% url 'home' %}">
                     <img src="{% static 'img/timeplus.png' %}" height="100" width="100" alt="Logo">
-                </a>                
-            </div>            
+                </a>
+            </div>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                
+
                 <div class="navbar-nav m-auto font-weight-bold">
                     <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
                     <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
@@ -108,11 +206,10 @@
                 </div>
                 <div class="ml-auto">
                     <div class="item-icon">
-                        <i class="flaticon-phone-call"></i>
-                    </div>
-                    <div class="item-content">
-                        
-                        <div class="item-number"><i class="fa fa-phone dark "> 0792280216</i></div>
+                        <img class="call-anamate" src="{% static 'img/phone-ringing-2.gif' %}" height="50" width="40"
+                            alt="Logo">
+                        <a class="call-link font-weight-bold" href="tel:+254792280216">+254792280216</a>
+
                     </div>
                 </div>
             </div>

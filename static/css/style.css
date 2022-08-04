@@ -108,20 +108,20 @@ a:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* height: 90px;
-    padding: 0 20px; */
+    height: 90px;
+    padding: 0 20px;
     text-align: center;
     border-left: 1px solid rgba(255, 255, 255, .15);
 }
 
-/* .top-bar .text h2 {
+.top-bar .text h2 {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 25px;
     margin: 0;
-} */
+}
 
 .top-bar .text p {
     color: #ffffff;

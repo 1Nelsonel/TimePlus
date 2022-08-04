@@ -81,7 +81,7 @@ a:focus {
 }
 
 .top-bar .logo {
-    
+    padding: 15px 0;
     text-align: left;
     overflow: hidden;
 }
@@ -89,7 +89,9 @@ a:focus {
 .top-bar .logo h1 {
     margin: 0;
     color: #aa9166;
-    
+    font-size: 75px;
+    line-height: 55px;
+    font-weight: 800;
 }
 
 .top-bar .logo img {
@@ -126,13 +128,13 @@ a:focus {
 .top-bar .text p {
     color: #ffffff;
     font-size: 13px;
-    /* margin: 0; */
+    margin: 0;
 }
 
 .top-bar .social {
     display: flex;
-    /* height: 90px;
-    font-size: 0; */
+    height: 90px;
+    font-size: 0;
     justify-content: flex-end;
 }
 
@@ -140,9 +142,9 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 60px;
+    width: 60px;
     height: 100%;
-    font-size: 22px; */
+    font-size: 22px;
     color: #ffffff;
     border-right: 1px solid rgba(255, 255, 255, .15);
 }
@@ -659,8 +661,8 @@ a:focus {
     height: 200px;
     position: relative;
     display: flex;
-    align-items: left !important;
-    justify-content: left !important;
+    align-items: center;
+    justify-content: center;
     background: #000000;
 }
 

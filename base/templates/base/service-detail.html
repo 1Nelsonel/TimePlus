@@ -13,6 +13,9 @@
     .page-header {
         background-color: #416327 !important;
     }
+    .contact .contact-info {
+        background: #416327 !important;
+    }
 
     .link-blog {
         color: #416327 !important;
@@ -122,6 +125,38 @@
     .single .comment-form .btn {
         border-radius: 45px;
     }
+    .contact .contact-info {
+        background: #416327 !important;
+    }
+
+    .contact .contact-item {
+        border: 2px solid #000 !important;
+    }
+
+    .contact .contact-item i {
+        color: #fef22e !important;
+        border: 2px solid #ffff !important;
+    }
+
+    .contact .contact-text h2 {
+        color: #fef22e !important;
+    }
+
+    .contact .contact-text p {
+        color: #000 !important;
+        
+    }
+    .a-link {
+        color: #000;
+    }
+    .btn {
+        background-color: #416327 !important;
+        color: white !important;
+    }
+    .btn:hover {
+        background-color: #fef22e !important;
+        color: #000 !important;
+    }
 </style>
 
 <!-- Page Header Start -->
@@ -133,7 +168,7 @@
             </div>
             <div class="col-12">
                 <a href="{% url 'home' %}">Home</a>
-                <a href="">Single Page</a>
+                <a href="{% url 'service' %}">Service</a>
             </div>
         </div>
     </div>
@@ -144,26 +179,41 @@
 <!-- Single Page Start -->
 <div class="single">
     <div class="container">
-        
-                <div class="section-header">
-                    <h2>Blog</h2>
-                </div>
-            
+
+        <div class="section-header">
+            <h2>Service</h2>
+        </div>
+
         <div class="row">
-            <div class="col-sm-12">
-                <img class="img-fluid rounded" src="{{blog.image.url}}" width="100%" height="180"
+            <div class="col-sm-8">
+                <img class="img-fluid rounded" src="{{service.image.url}}" width="100%" height="180"
                     alt="TimePlus Cleanings Image">
-            </div>
 
-            <div class="col-sm-12">
                 <div class="">
-                    <h3 class="link-blog" href="">{{ blog.title }}</h3>
+                    <h3 class="link-blog" href="">{{ service.name }}</h3>
                 </div>
+                <p>
+                    {{ service.body |escape |linebreaks}}.
+                </p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 contact">
+                {% for serve in services %}
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <!-- <i class="fa fa-map-marker-alt"></i> -->
+                        <div class="contact-text">
+                            <h2><a class="a-link" href="#">{{ serve.name }}</a></h2>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+               
+            </div>
+
+            <!-- <div class="col-sm-4">
                 <i class="fa fa-list-alt"></i>
-                <a class="link-blog" href="">{{ blog.service }}</a>
+                <a class="link-blog" href="">{{ service.service }}</a>
             </div>
             <div class="col-sm-4">
                 <i class="fa fa-calendar-alt"></i>
@@ -172,12 +222,10 @@
             <div class="col-sm-4">
                 <i class="fa fa-calendar-alt"></i>
                 <a class="link-blog" href="">{{ blog.host }}</a>
-            </div>
+            </div> -->
 
             <div class="col-sm-12">
-                <p>
-                    {{ blog.description |escape |linebreaks}}.
-                </p>
+                
             </div>
 
             <div class="single-comment">

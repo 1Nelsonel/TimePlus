@@ -15,6 +15,9 @@ def home(request):
 
 
 def service(request):
+
+    services = Service.objects.all()
+
     if request.method == 'POST':
         appoitment = Appointment.objects.create(
             name=request.POST.get('name'),
@@ -31,9 +34,14 @@ def service(request):
         messages.success(
             request, 'Your book an appointment successfully. Thank you!')
         return redirect('service')
-    context = {}
+    context = {'services': services }
     return render(request, 'base/service.html', context)
 
+def serviceDetail(request, pk):
+    service = Service.objects.get(id=pk)
+    services = Service.objects.all()
+    context = {'service': service, 'services': services}
+    return render(request, 'base/service-detail.html', context)
 
 def about(request):
     context = {}

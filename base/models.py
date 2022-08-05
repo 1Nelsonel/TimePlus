@@ -5,9 +5,16 @@ from django.contrib.auth.models import User
 
 class Service(models.Model):
     name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='static/image', null=True)
+    body = models.TextField(null=True)
+    updated = models.DateTimeField(auto_now=True, null=True)
+    created = models.DateTimeField(auto_now_add=True, null=True)
+
+    class Meta:
+        ordering = ['-updated', '-created']
 
     def __str__(self):
-        return self.name
+        return self.name[0:50]
 
 
 class Blog(models.Model):
@@ -67,3 +74,16 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.name[0:50]
+
+# class Services(models.Model):
+#     title = models.CharField(max_length=255)
+#     image = models.ImageField(upload_to='static/image', null=True)
+#     body = models.TextField()
+#     updated = models.DateTimeField(auto_now=True)
+#     created = models.DateTimeField(auto_now_add=True)
+
+#     class Meta:
+#         ordering = ['-updated', '-created']
+
+#     def __str__(self):
+#         return self.title[0:50]

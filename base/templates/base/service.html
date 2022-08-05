@@ -128,7 +128,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-item">
                     <div class="service-icon ">
-                        <img src="{% static 'img/service1.jpg' %}" width="300%" alt="">
+                        <img src="{% static 'img/service1.jpg' %}" width="100%" alt="">
                     </div>
                     <h3>Residential Cleaning</h3>
 
@@ -253,10 +253,11 @@
                 <div class="col-lg-6 py-5">
                     <div class="rounded p-5 my-5" style="background: rgba(13, 14, 13, 0.7);">
                         <h1 class="text-center text-white mb-4">Get An Appointment</h1>
-                        <form>
+                        <form method="POST">
+                            {% csrf_token %}
 
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                <select name="ptype" class="custom-select border-0 px-4" style="height: 47px;">
                                     <option value="0">Property Type</option>
                                     <option value="Bungalow">Bungalow</option>
                                     <option value="Mansionete Apartment">Mansionete Apartment</option>
@@ -267,7 +268,7 @@
                             <div class="form-row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <select class="custom-select border-0 px-4" style="height: 47px;">
+                                        <select name="bedroom" class="custom-select border-0 px-4" style="height: 47px;">
                                             <option value="0">-- Bedrooms --</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -278,7 +279,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <select class="custom-select border-0 px-4" style="height: 47px;">
+                                        <select name="frequency" class="custom-select border-0 px-4" style="height: 47px;">
                                             <option value="0">-- Frequency --</option>
                                             <option value="Daily">Daily</option>
                                             <option value="Monthly">Monthly</option>
@@ -292,7 +293,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <div class="date" id="date" data-target-input="nearest">
-                                            <input type="date" class="form-control border-0 p-4 datetimepicker-input"
+                                            <input type="date" name="date" class="form-control border-0 p-4 datetimepicker-input"
                                                 placeholder="Select Date" data-target="#date"
                                                 data-toggle="datetimepicker" data-error="Message field is required" required/>
                                         </div>
@@ -301,7 +302,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <div class="time" id="time" data-target-input="nearest">
-                                            <input type="time" class="form-control border-0 p-4 datetimepicker-input"
+                                            <input type="time" name="time" class="form-control border-0 p-4 datetimepicker-input"
                                                 placeholder="Select Time" data-target="#time"
                                                 data-toggle="datetimepicker" data-error="Message field is required" required/>
                                         </div>
@@ -313,23 +314,23 @@
                             <div class="form-row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control border-0 p-4" placeholder="Your Name"
+                                        <input type="text" name="name" class="form-control border-0 p-4" placeholder="Your Name"
                                         data-error="Message field is required" required />
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="tel" class="form-control border-0 p-4" placeholder="Your Phone"
+                                        <input type="tel" name="phone" class="form-control border-0 p-4" placeholder="Your Phone"
                                         data-error="Message field is required" required />
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email"
+                                <input type="email" name="email" class="form-control border-0 p-4" placeholder="Your Email"
                                 data-error="Message field is required" required />
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control border-0 p-4"  name="message" id="" width="100%"  data-error="Message field is required" required>Say something</textarea>
+                                <textarea class="form-control border-0 p-4"  name="body" id="" width="100%"  data-error="Message field is required" required>Say something</textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An

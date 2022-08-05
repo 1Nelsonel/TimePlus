@@ -54,3 +54,16 @@ class Message(models.Model):
     def __str__(self):
         return self.body[0:50]
 
+class Appointment(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    body = models.TextField()
+    ptype = models.CharField(max_length=50)
+    bedroom = models.IntegerField()
+    frequency = models.CharField(max_length=50)
+    time = models.TimeField()
+    date = models.DateField()
+
+    def __str__(self):
+        return self.name[0:50]

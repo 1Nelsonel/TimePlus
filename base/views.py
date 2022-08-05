@@ -2,7 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
-from base.models import Message, Blog, Comment, Service
+from base.models import Appointment, Message, Blog, Comment, Service
 
 
 # Create your views here.
@@ -15,6 +15,22 @@ def home(request):
 
 
 def service(request):
+    if request.method == 'POST':
+        appoitment = Appointment.objects.create(
+            name=request.POST.get('name'),
+            email=request.POST.get('email'),
+            phone=request.POST.get('phone'),
+            body=request.POST.get('body'),
+            ptype=request.POST.get('ptype'),
+            bedroom=request.POST.get('bedroom'),
+            frequency=request.POST.get('frequency'),
+            time=request.POST.get('time'),
+            date=request.POST.get('date'),
+        )
+
+        messages.success(
+            request, 'Your book an appointment successfully. Thank you!')
+        return redirect('service')
     context = {}
     return render(request, 'base/service.html', context)
 
@@ -82,3 +98,6 @@ def contact(request):
         return redirect('contact')
     context = {}
     return render(request, 'base/contact.html', context)
+
+
+

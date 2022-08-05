@@ -45,70 +45,23 @@
                     <h2>Have A Questions?</h2>
                 </div>
                 <div id="accordion">
+                    {% for faq in faqs %}
                     <div class="card">
                         <div class="card-header">
-                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
-                                <span>1</span> Do i have to sign a contract?
+                            <a class="card-link" data-toggle="collapse" href="#collapse">
+                                <span>{{ faq.id }}</span> {{faq.quiz}}
                             </a>
                         </div>
-                        <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div id="collapse" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                                We offer both contract services and non- contract services.
+                                {{faq.answer}}
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
-                                <span>2</span> Will i always have the same house cleaner?
-                            </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                Right! We have a number of trusted house cleaners. They rotate so as to provide
-                                a wider range of experince, however if the client needs the same house cleaner he or she
-                                can be assigned.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link" data-toggle="collapse" href="#collapseThree">
-                                <span>3</span> Do you Guatantee your work?
-                            </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                We have a team of professionals who give 100% guarantee.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link" data-toggle="collapse" href="#collapseFour">
-                                <span>4</span>How i can make payment?
-                            </a>
-                        </div>
-                        <div id="collapseFour" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                We accept both cash and mpesa payment.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link" data-toggle="collapse" href="#collapseFive">
-                                <span>5</span> Can i have cleaning professionals for a month?
-                            </a>
-                        </div>
-                        <div id="collapseFive" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                Sure we offer professionals cleaning services on monthly basis.
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+
                 </div>
-                <a class="btn" href="">Ask more</a>
+                <a class="btn" href="{% url 'contact' %}">Ask more</a>
             </div>
         </div>
     </div>

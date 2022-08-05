@@ -2,7 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
-from base.models import Appointment, Message, Blog, Comment, Service
+from base.models import Appointment, Faq, Message, Blog, Comment, Service
 
 
 # Create your views here.
@@ -54,7 +54,8 @@ def team(request):
 
 
 def fag(request):
-    context = {}
+    faqs = Faq.objects.all()
+    context = {'faqs': faqs}
     return render(request, 'base/faq.html', context)
 
 

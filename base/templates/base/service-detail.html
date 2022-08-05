@@ -147,7 +147,10 @@
         
     }
     .a-link {
-        color: #000;
+        color: #fef22e !important;
+    }
+    .a-link:hover {
+        color: white !important;
     }
     .btn {
         background-color: #416327 !important;
@@ -203,7 +206,7 @@
                     <div class="contact-item">
                         <!-- <i class="fa fa-map-marker-alt"></i> -->
                         <div class="contact-text">
-                            <h2><a class="a-link" href="#">{{ serve.name }}</a></h2>
+                            <h2><a class="a-link" href="{% url 'service' %}">{{ serve.name }}</a></h2>
                         </div>
                     </div>
                 </div>

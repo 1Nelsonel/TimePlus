@@ -75,15 +75,14 @@ class Appointment(models.Model):
     def __str__(self):
         return self.name[0:50]
 
-# class Services(models.Model):
-#     title = models.CharField(max_length=255)
-#     image = models.ImageField(upload_to='static/image', null=True)
-#     body = models.TextField()
-#     updated = models.DateTimeField(auto_now=True)
-#     created = models.DateTimeField(auto_now_add=True)
+class Faq(models.Model):
+    quiz = models.CharField(max_length=255)
+    answer = models.TextField()
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
 
-#     class Meta:
-#         ordering = ['-updated', '-created']
+    class Meta:
+        ordering = ['created']
 
-#     def __str__(self):
-#         return self.title[0:50]
+    def __str__(self):
+        return self.quiz[0:50]

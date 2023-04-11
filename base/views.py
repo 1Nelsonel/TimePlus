@@ -1,7 +1,8 @@
 from django.core.paginator import Paginator
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib import messages
-
+from urllib.parse import quote
 from base.models import Appointment, Faq, Message, Blog, Comment, Service
 
 
@@ -40,6 +41,18 @@ def service(request):
 def serviceDetail(request, pk):
     service = Service.objects.get(id=pk)
     services = Service.objects.all()
+
+    if request.method == 'POST':
+        phone_number = '254798616085'  # Replace with your phone number
+        service_name = request.POST.get('service_name')
+        service = Service.objects.get(name=service_name)
+
+        service_link = request.build_absolute_uri(service.get_absolute_url())
+        whatsapp_message = f'I am interested in the:\n*{service.name.capitalize()}* service.\nPlease contact me.\n\nService link:\n{service_link}'
+
+        whatsapp_url = f'https://wa.me/{phone_number}?text={quote(whatsapp_message)}'
+        return HttpResponseRedirect(whatsapp_url)
+    
     context = {'service': service, 'services': services}
     return render(request, 'base/service-detail.html', context)
 

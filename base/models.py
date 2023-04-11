@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 
@@ -15,6 +16,10 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name[0:50]
+    
+    def get_absolute_url(self):
+        return reverse('blogDetail', kwargs={'pk': self.pk})
+    
 
 
 class Blog(models.Model):

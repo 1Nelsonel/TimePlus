@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6a7aey5303$nlr0x0=x&n2ux7ji(p(2run(eeq)41(+n=m*q#u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
-    'storages',
+   
 ]
 
 MIDDLEWARE = [
@@ -130,34 +130,34 @@ MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 
 # aws intergration
 
-AWS_STORAGE_BUCKET_NAME = 'timeplus'
+# AWS_STORAGE_BUCKET_NAME = 'timeplus'
 
-AWS_ACCESS_KEY_ID = 'AKIA6OBBHQLRKR67MGKI'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-AWS_DEFAULT_ACL = 'public-read'
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400'
-}
-AWS_LOCATION = 'static'
-AWS_QUERYSTRING_AUTH = False
-AWS_HEADERS = {
-    'Access-Control-Allow-Origin': '*',
-}
+# AWS_ACCESS_KEY_ID = 'AKIA6OBBHQLRKR67MGKI'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+# AWS_DEFAULT_ACL = 'public-read'
+# AWS_S3_OBJECT_PARAMETERS = {
+#     'CacheControl': 'max-age=86400'
+# }
+# AWS_LOCATION = 'static'
+# AWS_QUERYSTRING_AUTH = False
+# AWS_HEADERS = {
+#     'Access-Control-Allow-Origin': '*',
+# }
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+# STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 
 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/image/'
+# MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/image/'
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
